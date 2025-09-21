@@ -1,0 +1,327 @@
+/* --------------------
+   RESET BÁSICO
+-------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #0D0D0D;
+    color: #EAEAEA;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+  }
+  
+  /* --------------------
+     NAVBAR
+  -------------------- */
+  header {
+    background: #1A1A1A;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo img.logo-img {
+    height: 50px; /* Ajusta según tu navbar */
+    width: auto;
+    display: block;
+  }
+
+  .logo:hover {
+    opacity: 0.8;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #EAEAEA;
+    font-family: 'Merriweather', serif;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #8A0303;
+  }
+
+  /* Botón hamburguesa */
+.nav-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #EAEAEA;
+  cursor: pointer;
+}
+  
+  /* --------------------
+     HERO
+  -------------------- */
+  #hero {
+    background: url('../assets/hero/hero-umbra.png') no-repeat center center/cover;
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  #hero h1 {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  #hero p {
+    font-size: 1.2rem;
+    color: #A6A6A6;
+  }
+  
+  /* --------------------
+     NOVEDADES
+  -------------------- */
+  /* Título centrado */
+.novedades-title {
+  text-align: center;
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 2.2rem;
+  margin: 1rem 0 1rem 0;
+}
+
+/* Contenedor centralizado */
+.novedades-wrapper {
+  display: flex;
+  justify-content: center;  /* centra la card horizontalmente */
+  padding: 0 2rem;         /* espacio lateral */
+}
+
+/* Card de novedad: imagen a la izquierda, texto a la derecha */
+.novedad-item {
+  display: flex;
+  align-items: flex-start;
+  background-color: #1A1A1A ;
+  gap: 2rem;
+  max-width: 1000px;       /* limita ancho total */
+  width: 100%;   
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+/* Imagen */
+.novedad-img {
+  width: 300px;   
+  height: auto;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+/* Texto y botón */
+.novedad-text h3 {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.novedad-text p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.novedad-text .btn {
+  display: inline-block;
+}
+  
+  /* --------------------
+     PROMOCIONES (TIENDA / GALERÍA)
+  -------------------- */
+  #promo-tienda, #promo-galeria {
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+  
+  #promo-tienda img,
+  #promo-galeria img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+  }
+  
+  .btn {
+    display: inline-block;
+    background: #8A0303;
+    color: #EAEAEA;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+  }
+  
+  .btn:hover {
+    background: #2C2C54;
+  }
+  
+  /* --------------------
+     RESEÑAS
+  -------------------- */
+  #resenas {
+    padding: 3rem 2rem;
+    background: #1A1A1A;
+  }
+  
+  #resenas h2 {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .resenas-list blockquote {
+    background: #0D0D0D;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-left: 4px solid #2C2C54;
+    font-style: italic;
+  }
+  
+  /* --------------------
+     FOOTER
+  -------------------- */
+  footer {
+    background: #0D0D0D;
+    padding: 2rem;
+    text-align: center;
+    border-top: 1px solid #1A1A1A;
+  }
+  
+  .donaciones {
+    margin-bottom: 1.5rem;
+  }
+  
+  .footer-info p {
+    margin: 0.5rem 0;
+    color: #A6A6A6;
+    font-size: 0.9rem;
+  }
+  
+
+
+
+
+
+  /*Media Querys*/
+
+/* --------------------
+   MEDIA QUERIES
+-------------------- */
+
+/* --------------------
+   TABLETS (768px - 1024px)
+-------------------- */
+@media (max-width: 1024px) {
+  /* Hero */
+  #hero h1 {
+    font-size: 4rem;
+  }
+  #hero p {
+    font-size: 1.1rem;
+  }
+
+  .novedad-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .novedad-img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  /* Promos */
+  #promo-tienda, #promo-galeria {
+    padding: 2.5rem 1.5rem;
+  }
+
+  /* Reseñas */
+  #resenas h2 {
+    font-size: 1.8rem;
+  }
+  .resenas-list blockquote {
+    font-size: 0.95rem;
+  }
+}
+
+/* --------------------
+   CELULARES (menos de 768px)
+-------------------- */
+@media (max-width: 768px) {
+  /* Navbar: menú hamburguesa */
+  .nav-toggle {
+    display: block;
+  }
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #1A1A1A;
+    flex-direction: column;
+    width: 200px;
+    display: none;
+    padding: 1rem;
+    gap: 1rem;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+
+  /* Hero */
+  #hero {
+    padding: 2rem 1rem;
+  }
+  #hero h1 {
+    font-size: 3rem;
+  }
+  #hero p {
+    font-size: 1rem;
+  }
+
+  /* Novedades */
+  .novedades-list {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  /* Promos */
+  #promo-tienda, #promo-galeria {
+    padding: 2rem 1rem;
+  }
+
+  /* Reseñas */
+  #resenas h2 {
+    font-size: 1.6rem;
+  }
+  .resenas-list blockquote {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+  }
+
+  /* Footer */
+  footer {
+    padding: 1.5rem 1rem;
+  }
+  .footer-info p {
+    font-size: 0.85rem;
+  }
+}
