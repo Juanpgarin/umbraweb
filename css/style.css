@@ -119,8 +119,7 @@
   gap: 2rem;
   max-width: 1000px;       /* limita ancho total */
   width: 100%;   
-  padding: 1.5rem;
-  border-radius: 8px;
+  padding: 1.5rem;  
 }
 
 /* Imagen */
@@ -132,19 +131,83 @@
 }
 
 /* Texto y botón */
+.novedades-title {
+  text-align: center;
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 2.2rem;
+  margin: 1rem 0 1rem 0;
+}
+
+.novedades-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 0 2rem;
+}
+
+.novedad-item {
+  display: flex;
+  align-items: flex-start;
+  background-color: #1A1A1A;
+  gap: 2rem;
+  max-width: 1000px;
+  width: 100%;
+  padding: 1.5rem;
+}
+
+.novedad-img {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.novedad-text {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 .novedad-text h3 {
   font-family: 'Cinzel Decorative', serif;
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
 }
+
 .novedad-text p {
   font-size: 1rem;
   margin-bottom: 1rem;
+  flex-grow: 1;
 }
+
 .novedad-text .btn {
   display: inline-block;
+  align-self: flex-end;
+  margin-top: auto;
 }
+
+  /* --------------------
+     RESEÑAS
+  -------------------- */
+  #resenas {
+    padding: 3rem 2rem;
+    background: #1A1A1A;
+    margin-top: 2rem;
+  }
   
+  #resenas h2 {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .resenas-list blockquote {
+    background: #0D0D0D;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-left: 4px solid #2C2C54;
+    font-style: italic;
+  }
+
   /* --------------------
      PROMOCIONES (TIENDA / GALERÍA)
   -------------------- */
@@ -155,7 +218,7 @@
   
   #promo-tienda img,
   #promo-galeria img {
-    max-width: 100%;
+    max-width: 20%;
     height: auto;
     margin-bottom: 1rem;
     border-radius: 8px;
@@ -175,27 +238,7 @@
     background: #2C2C54;
   }
   
-  /* --------------------
-     RESEÑAS
-  -------------------- */
-  #resenas {
-    padding: 3rem 2rem;
-    background: #1A1A1A;
-  }
-  
-  #resenas h2 {
-    font-family: 'Cinzel Decorative', serif;
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  .resenas-list blockquote {
-    background: #0D0D0D;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border-left: 4px solid #2C2C54;
-    font-style: italic;
-  }
+
   
   /* --------------------
      FOOTER
@@ -240,13 +283,21 @@
     font-size: 1.1rem;
   }
 
-  .novedad-content {
-    flex-direction: column;
-    text-align: center;
-  }
-  .novedad-img {
-    width: 100%;
-    max-width: 300px;
+    .novedad-item {
+      flex-direction: column;
+      text-align: center;
+    }
+    .novedad-img {
+      width: 100%;
+      max-width: 300px;
+      margin: 0 auto;
+    }
+    .novedad-text {
+      align-items: center;
+    }
+    .novedad-text .btn {
+      align-self: center;
+    }
   }
 
   /* Promos */
@@ -261,7 +312,7 @@
   .resenas-list blockquote {
     font-size: 0.95rem;
   }
-}
+
 
 /* --------------------
    CELULARES (menos de 768px)
@@ -297,10 +348,18 @@
     font-size: 1rem;
   }
 
-  /* Novedades */
-  .novedades-list {
-    grid-template-columns: 1fr;
+  .novedades-wrapper {
+    padding: 0 1rem;
+  }
+  .novedad-item {
     gap: 1rem;
+    padding: 1rem;
+  }
+  .novedad-text h3 {
+    font-size: 1.3rem;
+  }
+  .novedad-text p {
+    font-size: 0.95rem;
   }
 
   /* Promos */
