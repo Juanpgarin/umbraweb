@@ -208,38 +208,120 @@
     font-style: italic;
   }
 
-  /* --------------------
-     PROMOCIONES (TIENDA / GALERÍA)
-  -------------------- */
-  #promo-tienda, #promo-galeria {
-    padding: 3rem 2rem;
-    text-align: center;
-  }
-  
-  #promo-tienda img,
-  #promo-galeria img {
-    max-width: 20%;
-    height: auto;
-    margin-bottom: 1rem;
-    border-radius: 8px;
-  }
-  
-  .btn {
-    display: inline-block;
-    background: #8A0303;
-    color: #EAEAEA;
-    text-decoration: none;
-    padding: 0.8rem 1.5rem;
-    border-radius: 4px;
-    transition: background 0.3s ease;
-  }
-  
-  .btn:hover {
-    background: #2C2C54;
-  }
-  
+  /* ===== SECCIÓN TIENDA ===== */
+#promo-tienda {
+  padding: 3rem 2rem;
+  text-align: center;
+  background: #1A1A1A;
+  margin-top: 2rem;
+  border-top: 2px solid #0D0D0D;
+}
 
-  
+#promo-tienda h2 {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #E6E6E6;
+}
+
+#promo-tienda p {
+  color: #A6A6A6;
+  margin-bottom: 2rem;
+}
+
+/* Layout principal */
+.tienda-layout {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Columna de productos */
+.productos-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.producto {
+  background: #262626;
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.producto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.25);
+}
+
+.producto img {
+  max-width: 140px;
+  margin-bottom: 0.5rem;
+}
+
+.producto h4 {
+  font-size: 1rem;
+  color: #E6E6E6;
+  margin-bottom: 0.5rem;
+}
+
+/* Imagen central como botón con overlay */
+.tienda-img {
+  position: relative;
+}
+
+.overlay-link {
+  position: relative;
+  display: inline-block;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.overlay-link img {
+  max-width: 300px;
+  display: block;
+  border-radius: 12px;
+  transition: filter 0.3s ease;
+}
+
+.overlay-link .overlay-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: 'Cinzel Decorative', serif;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.55);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 12px;
+}
+
+.overlay-link:hover img {
+  filter: brightness(1.2);
+}
+
+.overlay-link:hover .overlay-text {
+  opacity: 1;
+}
+
+.overlay-link:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.35);
+}
+
   /* --------------------
      FOOTER
   -------------------- */
